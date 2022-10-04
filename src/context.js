@@ -8,13 +8,13 @@ const AppProvider = ({children})=>{
     let newIndex;
 
     const checkRandom = (number) => {
-      if (number > getData.length - 1) {
-        return 0;
-      }
-      if (number < 0) {
-        return getData.length - 1;
-      }
-      return number;
+        if (number > getData.length - 1) {
+            return 0;
+        }
+        if (number < 0) {
+            return getData.length - 1;
+        }
+        return number;
     };
     const prevPerson = ()=>{
         setIndex(()=>{
@@ -24,8 +24,8 @@ const AppProvider = ({children})=>{
     }
     const nextPerson = () => {
         setIndex(() => {
-          newIndex = index + 1;
-          return checkRandom(newIndex);
+            newIndex = index + 1;
+            return checkRandom(newIndex);
         });
     }; 
     const randomPerson = ()=>{
@@ -37,14 +37,14 @@ const AppProvider = ({children})=>{
     }
 
     return (
-      <AppContext.Provider
-        value={{
-          getData,
-          setGetData,index, setIndex, prevPerson, nextPerson, randomPerson
-        }}
-      >
-        {children}
-      </AppContext.Provider>
+        <AppContext.Provider
+            value={{
+            getData,
+            setGetData,index, setIndex, prevPerson, nextPerson, randomPerson
+            }}
+        >
+            {children}
+        </AppContext.Provider>
     );
 }
 

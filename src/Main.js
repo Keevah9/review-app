@@ -1,7 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from './context'
 import {FaChevronLeft, FaChevronRight, FaQuoteRight} from 'react-icons/fa';
-const Main = ( ) => {
+const Main = () => {
     const {index, getData, prevPerson, nextPerson, randomPerson} = useGlobalContext()
     const { name, job, image, text } = getData[index];
     console.log(getData)
